@@ -1,0 +1,47 @@
+.student-section{
+    background-image: url(assets/images/student-goal-1600x755.jpg);
+    max-width: 1600px;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    position: relative;
+    padding: 1px;
+    .student-items-container{
+        display: flex;
+        justify-content: space-around;
+        .student-item-section{
+            position: relative;
+            width: 32%;
+            height: 450px;
+            background: #f4f5f7;
+            opacity: 0.8;
+            -webkit-clip-path: polygon( 50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+            clip-path: polygon( 50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+            img{
+                max-height: 80px;
+                margin-top: 40px;
+            }
+            h3{
+                font-size: 26px;
+                font-weight: 400;
+                margin: 15px 0;
+            }
+            p{
+                padding: 10px 50px;
+                a{
+                    text-decoration: none;
+                    color: $textHighlighter;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .student-section-more{
+        margin: 50px;
+        a{
+            &:hover{
+                background: $textColor;
+            }
+        }
+    }
+}

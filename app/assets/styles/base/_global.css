@@ -1,0 +1,57 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  max-width: 1200px;
+  margin: auto;
+}
+
+.btn{
+  text-decoration: none;
+  font-size: 16px;
+  border: 2px solid #333;
+  padding: 10px 30px;
+  border-radius: 50px;
+  color: #333;
+  font-weight: 500;
+  transition: .3s;
+  background: #edebf0;
+  &:hover{
+    color: #fff;
+    background: #333;
+  }
+}
+
+p{
+  color: #333;
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.section-title{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+  img{
+    height: 50px;
+  }
+  h2{
+    display: inline-block;
+    margin: 10px 0 0 18px;
+    font-size: 30px;
+    font-weight: 400;
+    vertical-align: top;
+  }
+}

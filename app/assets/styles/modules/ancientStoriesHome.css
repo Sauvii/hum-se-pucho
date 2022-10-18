@@ -1,0 +1,29 @@
+.ancient-stories-container{
+    margin-bottom: 40px;
+    .ancient-stories{
+        display: flex;
+        justify-content: space-around;
+        .story-item{
+            width: 46%;
+            text-align: center;
+            position: relative;
+            img{
+                width: 100%;
+                height: 550px;
+            }
+            .story-item-description{
+                top: 30px;
+                position: absolute;
+                padding: 0 50px 0 50px;
+                h3{
+                    margin: 20px;
+                    font-size: 24px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .more-stories-cta{
+        text-align: center;
+    }
+}

@@ -1,0 +1,76 @@
+header{
+    &.site-header{
+        position: fixed;
+        width: 100%;
+        background-color: $headerBackground;
+        border-bottom: 1px solid $outlineColor;
+        box-shadow: 0px 15px 50px rgb(0 0 0 / 7%);
+        z-index: 2;
+        .logo-image{
+            display: inline-block;
+            margin: 0 0 0 20px;
+            img{
+                max-width: 100px;
+            }
+        }
+        .menu-navigation{
+            display: none;
+            vertical-align: top;
+            float: right;
+            margin: 0 20px;
+            ul{
+            list-style-type: none;
+            text-align: right;
+            &.top-menus{
+                    font-size: 14px;
+                    padding: 0;
+                    margin: 0;
+                    li{
+                        padding: 10px;
+                        display: inline-block;
+                        &:hover{
+                            background: $textColor;
+                            color: $white;
+                            border-radius: 4px;
+                            transition-duration: .3s;
+                            cursor: pointer;
+                        }
+                    }
+            }
+            &.primary-nav{
+                    padding: 0;
+                    margin: 14px 5px 0 0;
+                    li{
+                        display: inline-block;
+                        padding: 15px 30px;
+                        img{
+                            height: 20px;
+                            vertical-align: baseline;
+                        }
+                        &:last-child{
+                            padding: 0;
+                            margin-left: 10px;
+                            &:hover{
+                                background: transparent;
+                                transition: .3s;
+                                img{
+                                    transform: scale(1.2);
+                                }
+                            }
+                        }
+                        &:hover{
+                            background: $textColor;
+                            color: $white;
+                            border-radius: 4px;
+                            transition-duration: .3s;
+                            cursor: pointer;
+                        }
+                    }
+            }
+            }
+            @mixin atLarge {
+                display: inline-block;
+            }
+        }
+    }
+}
