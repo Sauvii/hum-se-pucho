@@ -21,7 +21,7 @@ const postCSSPlugins = [
 
 class RunAfterCompile {
   apply(compiler) {
-    compiler.hooks.done.tap('Copy Images', function(){
+    compiler.hooks.done.tap('Copy images', function() {
       fse.copySync('./app/assets/images', './docs/assets/images')
     })
   }
@@ -29,12 +29,12 @@ class RunAfterCompile {
 
 let cssConfig = {
   test: /\.css$/i,
-  use: ["css-loader?url=false", { loader: "postcss-loader", options: { postcssOptions: { plugins: postCSSPlugins } } }]
+  use: ['css-loader?url=false', {loader: 'postcss-loader', options: {postcssOptions: {plugins: postCSSPlugins}}}]
 }
 
-let pages = fse.readdirSync('./app').filter(function(file){
+let pages = fse.readdirSync('./app').filter(function(file) {
   return file.endsWith('.html')
-}).map(function(page){
+}).map(function(page) {
   return new HtmlWebpackPlugin({
     filename: page,
     template: `./app/${page}`
@@ -70,7 +70,16 @@ if (currentTask == 'dev') {
 }
 
 if (currentTask == 'build') {
-
+  config.module.rules.push({
+    test: /\.js$/,
+    exclude: /(node_modules)/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-env']
+      }
+    }
+  })
 
   cssConfig.use.unshift(MiniCssExtractPlugin.loader)
   config.output = {
@@ -80,14 +89,14 @@ if (currentTask == 'build') {
   }
   config.mode = 'production'
   config.optimization = {
-    splitChunks: {chunks: 'all', minSize: 1000},
+    splitChunks: {chunks: 'all'},
     minimize: true,
     minimizer: [`...`, new CssMinimizerPlugin()]
   }
   config.plugins.push(
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({filename: 'styles.[chunkhash].css'}),
-    new  RunAfterCompile()
+    new RunAfterCompile()  
   )
 }
 
