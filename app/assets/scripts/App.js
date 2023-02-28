@@ -3,13 +3,19 @@ import 'lazysizes'
 import MobileMenu from './modules/MobileMenu'
 import RevealOnScroll from './modules/RevealOnScroll'
 import StickyHeader from './modules/StickyHeader'
+import RegularUpdates from './modules/RegularUpdates'
 
 new StickyHeader()
 new RevealOnScroll(document.querySelectorAll(".feature-item"), 75)
 new RevealOnScroll(document.querySelectorAll(".testimonial"), 60)
 new MobileMenu();
-let modal
 
+
+let nextSlide = document.getElementsByClassName("next")[0];
+let lastSlide = document.getElementsByClassName("previous")[0];
+nextSlide
+
+let modal
 document.querySelectorAll(".open-modal").forEach(el => {
   el.addEventListener("click", e => {
     e.preventDefault()

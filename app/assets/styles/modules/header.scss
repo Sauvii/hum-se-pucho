@@ -24,16 +24,18 @@ header{
             &.top-menus{
                     font-size: 14px;
                     padding: 0;
-                    margin: 0;
+                    margin: 15px 0 28px 0;
                     li{
-                        padding: 10px;
                         display: inline-block;
-                        &:hover{
-                            background: $textColor;
-                            color: $white;
-                            border-radius: 4px;
-                            transition-duration: .3s;
-                            cursor: pointer;
+                        a{
+                            padding: 10px;
+                            &:hover{
+                                background: $textColor;
+                                color: $white;
+                                border-radius: 4px;
+                                transition-duration: .3s;
+                                cursor: pointer;
+                            }
                         }
                     }
             }
@@ -42,7 +44,16 @@ header{
                     margin: 14px 5px 0 0;
                     li{
                         display: inline-block;
-                        padding: 15px 30px;
+                        a{
+                            padding: 15px 30px;
+                            &:hover{
+                                background: $textColor;
+                                color: $white;
+                                border-radius: 4px;
+                                transition-duration: .3s;
+                                cursor: pointer;
+                            }
+                        }
                         img{
                             height: 20px;
                             vertical-align: baseline;
@@ -57,13 +68,6 @@ header{
                                     transform: scale(1.2);
                                 }
                             }
-                        }
-                        &:hover{
-                            background: $textColor;
-                            color: $white;
-                            border-radius: 4px;
-                            transition-duration: .3s;
-                            cursor: pointer;
                         }
                     }
             }

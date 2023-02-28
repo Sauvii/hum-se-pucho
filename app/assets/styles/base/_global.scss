@@ -17,6 +17,11 @@ img {
   margin: auto;
 }
 
+.link-arrow{
+  font-size: 25px;
+  vertical-align: -8%;
+}
+
 .btn{
   text-decoration: none;
   font-size: 16px;
@@ -24,7 +29,7 @@ img {
   padding: 10px 30px;
   border-radius: 50px;
   color: #333;
-  font-weight: 500;
+  font-weight: 600;
   transition: .3s;
   background: #edebf0;
   &:hover{
@@ -38,6 +43,15 @@ p{
   margin: 10px 0;
   font-size: 16px;
   line-height: 22px;
+}
+
+a{
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  &:hover{
+      color: #2666bf;
+  }
 }
 
 .section-title{
