@@ -4,10 +4,12 @@
         display: flex;
         justify-content: space-around;
         margin-bottom: 35px;
+        flex-wrap: wrap;
         .story-item{
-            max-width: 540px;
+            width: 540px;
             border: 1px solid;
             border-radius: 5px; 
+            margin-bottom: 10px;
             .story-item-description{
                 padding: 0 30px 15px;
                 h3{

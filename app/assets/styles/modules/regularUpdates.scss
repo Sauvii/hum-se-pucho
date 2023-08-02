@@ -5,6 +5,9 @@
         margin-top: 30px;
         border-radius: 10px;
         text-align: center;
+        @media (max-width: 600px){
+            margin-top: 10px;
+        }
         .updates-carousel-container {
             position: relative;
             .updates-carousel-item {
@@ -15,16 +18,28 @@
                 min-height: 250px;
                 position: relative;
                 display: none;
+                @media (max-width: 600px){
+                    margin-left: 45px;
+                    margin-right: 45px;
+                    margin-bottom: 45px;
+                }
                 img {
                     width: 50%;
                     vertical-align: bottom;
                     border-radius: 4px 0 0 4px;
+                    max-height: 280px;
+                    @media (max-width: 600px){
+                        width: 100%;
+                    }
                 }
                 .updates-container {
                     width: 45%;
                     display: inline-block;
                     vertical-align: top;
                     margin-left: 25px;
+                    @media (max-width: 600px){
+                        width: 85%;
+                    }
                     h3 {
                         font-size: 24px;
                         font-weight: 400;
@@ -38,7 +53,7 @@
                         }
                     }
                 }
-                &.is_visible{
+                &.is-visible{
                     display: block;
                 }
             }
@@ -58,9 +73,15 @@
             }
             .prev{
                 left: 35px;
+                @media (max-width: 600px){
+                    left: 10px;
+                }
             }
             .next{
                 right: 30px;
+                @media (max-width: 600px){
+                    right: 12px;
+                }
             }
         }
 
