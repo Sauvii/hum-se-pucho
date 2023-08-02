@@ -24,11 +24,10 @@
             <li><a href="about-us.html">About Us</a></li>
           </ul>
           <ul class="primary-nav">
-            <li><a href="/life-guide.html">Life Guide</a></li>
-            <li><a href="indian-tourism.html">Indian Tourism</a></li>
-            <li><a href="ancient-india.html">Ancient India</a></li>
-            <li><a href="festivals.html">Festivals</a></li>
-            <li><a href="students-corner.html">Students Corner</a></li>
+            <li><a href="/indian-tourism.html">Indian Tourism</a></li>
+            <li><a href="/ancient-tales.html">Ancient Tales</a></li>
+            <li><a href="/festivals.html">Festivals</a></li>
+            <li><a href="/students-corner.html">Students Corner</a></li>
             <li><img src="assets/images/icons/user.svg" alt="User Icon"></li>
           </ul>
         </div>
@@ -65,11 +64,14 @@
   <div class="contact-form-widget">
     <div class="wrapper">
       <div class="form-area">
-        <label>
-          Tell Us about your Query
-        </label>
-        <input type="text" id="form-widget-field" placeholder="Type Something...">
-        <button>Send</button>
+        <form action="contact-us.html" method="get">
+          <label>
+            Tell Us about your Query
+          </label>
+          <input type="text" id="form-widget-field" placeholder="Type Here..." required
+            oninvalid="this.setCustomValidity('Please type here before submit')">
+          <input type="submit" value="Send">
+        </form>
       </div>
     </div>
   </div>
@@ -82,7 +84,7 @@
           <h2>Let's See What's Going on Around the World</h2>
         </div>
         <div class="updates-carousel-container">
-          <div class="updates-carousel-item is_visible">
+          <div class="updates-carousel-item">
             <img src="assets/images/adobe-figma.jpg" alt="$20B Figma deal">
             <div class="updates-container">
               <h3>Adobe to Acquire Figma</h3>
@@ -109,8 +111,8 @@
               <p><a class="btn" href="" target="_blank">Read More</a></p>
             </div>
           </div>
-          <a class="prev">&#8249;</a>
-          <a class="next">&#8250;</a>
+          <a class="prev" onclick="previousSlide(-1)">&#8249;</a>
+          <a class="next" onclick="nextSlide(1)">&#8250;</a>
         </div>
       </div>
     </div>
@@ -149,7 +151,7 @@
       </div>
       <div class="student-section-more">
         <p>
-          <a class="btn" href="#">See More</a>
+          <a class="btn" href="students-corner.html">See More</a>
         </p>
       </div>
     </div>
@@ -159,7 +161,7 @@
     <div class="wrapper">
       <div class="section-title">
         <img src="assets/images/icons/magic-book.png" alt="icon of magic book">
-        <h2>Ancient Indian Stories</h2>
+        <h2>Ancient Tales</h2>
       </div>
       <div class="ancient-stories">
         <div class="story-item">
@@ -168,7 +170,7 @@
             <h3>Gauri Putra Shri Ganesh</h3>
             <p>If you found a face of elephnat being worshipped than he is no other than our lord Ganpati bappa. Lord
               Ganesha is eldest son of shri Parvati Ji and Prabhu Bholenath Shiv Shambhu. He is the first one to be
-              worshipped among all hindu gods.</p><a href="#">Read Full Story <span class="link-arrow">›</span></a>
+              worshipped among all hindu gods.</p><a href="#">Read More <span class="link-arrow">›</span></a>
           </div>
         </div>
         <div class="story-item">
@@ -177,13 +179,13 @@
             <h3>Pavan Putra Veer Hanuman</h3>
             <p>Hanuman is a Hindu god and a divine vanara companion of the god Rama. Hanuman is one of the central
               characters of the Hindu epic Ramayana. He is an ardent devotee of Rama and one of the chiranjivis. Hanuman
-              is also son of the wind-god Vayu.</p><a href="#">Read Full Story <span class="link-arrow">›</span></a>
+              is also son of the wind-god Vayu.</p><a href="#">Read More <span class="link-arrow">›</span></a>
           </div>
         </div>
       </div>
       <div class="more-stories-cta">
         <p>
-          <a class="btn" href="#">Read More Stories</a>
+          <a class="btn" href="ancient-tales.html">Read More Stories</a>
         </p>
       </div>
     </div>
@@ -212,7 +214,7 @@
       </div>
       <div class="more-stories-cta">
         <p>
-          <a class="btn" href="#">View All</a>
+          <a class="btn" href="indian-tourism.html">View All</a>
         </p>
       </div>
     </div>
@@ -224,7 +226,8 @@
       <ol>
         <li>
           <p>
-            All the information provided at this site has been collected from the different sources available like social
+            All the information provided at this site has been collected from the different sources available like
+            social
             blogs, social media, online websites, newspaper etc. We have tried to add refences for the original
             owner at every possible section. Please connect for credits or removal of any content.
           </p>
@@ -250,16 +253,13 @@
       <div class="footer-links">
         <ul class="site-links">
           <li>
-            <p>About Us</p>
+            <p><a href="about-us.html">About Us</a></p>
           </li>
           <li>
-            <p>Connect With Us</p>
+            <p><a href="contact-us.html">Connect With Us</a></p>
           </li>
           <li>
-            <p>Services Offered</p>
-          </li>
-          <li>
-            <p>Save Your Tax</p>
+            <p><a href="services-offered.html">Services Offered</a></p>
           </li>
         </ul>
         <div class="footer-social">
@@ -279,6 +279,44 @@
       <div class="site-footer__text"><small>Copyright &copy; 2022 Hum Se Pucho. All rights reserved.</small></div>
     </div>
   </footer>
+
+  <script>
+
+    let slides = document.getElementsByClassName("updates-carousel-item");
+
+    let n = 0;
+
+    visibleSlide(n);
+
+    function visibleSlide(x) {
+      slides[x].classList.add("is-visible");
+    }
+
+    function nextSlide(x) {
+      if (n < slides.length - 1) {
+        visibleSlide(n + 1);
+        slides[n].classList.remove("is-visible");
+        n++;
+      } else {
+        slides[n].classList.remove("is-visible");
+        n = 0;
+        visibleSlide(n);
+      }
+    }
+
+    function previousSlide() {
+      if (n > 0) {
+        visibleSlide(n - 1);
+        slides[n].classList.remove("is-visible");
+        n--;
+      } else {
+        slides[n].classList.remove("is-visible");
+        n = slides.length - 1;
+        visibleSlide(n);
+      }
+    }
+
+  </script>
 
 </body>
 
