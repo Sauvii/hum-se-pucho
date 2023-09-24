@@ -8,10 +8,9 @@
         background: $greyBackground;
         margin: auto;
         margin-top: -66px;
-        label{
-            font-size: 14px;
-            display: block;
-            font-weight: 500;
+        @media (max-width: 767px){
+            margin-top: 6px;
+            padding: 25px 0px 20px 25px;
         }
         input{
             &#form-widget-field{
@@ -23,8 +22,14 @@
                 border: none;
                 font-size: 14px;
             }
+            label{
+                font-size: 14px;
+                display: block;
+                font-weight: 500;
+            }
+
         }
-        button{
+        input[type=submit]{
             background: $black;
             color: $white;
             margin: 6px 0 0 20px;
@@ -37,6 +42,11 @@
             &:hover{
                 background: $homeCTAbackground;
                 color: $black;
+            }
+            @media (max-width: 767px){
+                margin-left: 0;
+                margin-right: 20px;
+                margin-top: 10px;
             }
         }
     }

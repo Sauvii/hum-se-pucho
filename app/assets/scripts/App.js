@@ -10,11 +10,7 @@ new RevealOnScroll(document.querySelectorAll(".feature-item"), 75)
 new RevealOnScroll(document.querySelectorAll(".testimonial"), 60)
 new MobileMenu();
 
-
-let nextSlide = document.getElementsByClassName("next")[0];
-let lastSlide = document.getElementsByClassName("previous")[0];
-nextSlide
-
+//Modal
 let modal
 document.querySelectorAll(".open-modal").forEach(el => {
   el.addEventListener("click", e => {
@@ -33,3 +29,5 @@ document.querySelectorAll(".open-modal").forEach(el => {
 if (module.hot) {
   module.hot.accept()
 }
+
+//Carousel
