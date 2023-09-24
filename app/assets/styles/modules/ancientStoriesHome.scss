@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .ancient-stories-container{
     margin-bottom: 40px;
     .ancient-stories{
@@ -28,35 +27,4 @@
     .more-stories-cta{
         text-align: center;
     }
-=======
-.ancient-stories-container{
-    margin-bottom: 40px;
-    .ancient-stories{
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 35px;
-        flex-wrap: wrap;
-        .story-item{
-            width: 540px;
-            border: 1px solid;
-            border-radius: 5px; 
-            margin-bottom: 10px;
-            .story-item-description{
-                padding: 0 30px 15px;
-                h3{
-                    margin: 20px 0;
-                    font-size: 24px;
-                    font-weight: 400;
-                }
-                p{
-                    text-decoration: none;
-                    color: $textColor;
-                }
-            }
-        }
-    }
-    .more-stories-cta{
-        text-align: center;
-    }
->>>>>>> 7d3b3f341513ca2ed15afc21484e192c7f15c285
 }
