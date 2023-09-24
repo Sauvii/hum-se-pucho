@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .contact-form-widget{
     position: relative;
     .form-area{
@@ -50,4 +51,58 @@
             }
         }
     }
+=======
+.contact-form-widget{
+    position: relative;
+    .form-area{
+        max-width: 800px;  
+        border: 2px solid $borderGreyColor;
+        border-radius: 10px;
+        padding: 30px 40px;
+        background: $greyBackground;
+        margin: auto;
+        margin-top: -66px;
+        @media (max-width: 600px){
+            margin-top: 6px;
+            padding: 25px 0px 20px 25px;
+        }
+        input{
+            &#form-widget-field{
+                height: 40px;
+                width: 85%;
+                padding-left: 15px;
+                margin-top: 8px;
+                border-radius: 4px;
+                border: none;
+                font-size: 14px;
+            }
+            label{
+                font-size: 14px;
+                display: block;
+                font-weight: 500;
+            }
+
+        }
+        input[type=submit]{
+            background: $black;
+            color: $white;
+            margin: 6px 0 0 20px;
+            vertical-align: top;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: .3s;
+            border: 2px solid #000;
+            &:hover{
+                background: $homeCTAbackground;
+                color: $black;
+            }
+            @media (max-width: 600px){
+                margin-left: 0;
+                margin-right: 20px;
+                margin-top: 10px;
+            }
+        }
+    }
+>>>>>>> 7d3b3f341513ca2ed15afc21484e192c7f15c285
 }

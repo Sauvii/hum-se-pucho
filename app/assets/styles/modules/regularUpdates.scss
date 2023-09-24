@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .updates-container {
     .update-carousel {
         border: 2px solid $borderGreyColor;
@@ -92,4 +93,97 @@
             left: -7%;
         }
     }
+=======
+.updates-container {
+    .update-carousel {
+        border: 2px solid $borderGreyColor;
+        background: $lightGreyBackground;
+        margin-top: 30px;
+        border-radius: 10px;
+        text-align: center;
+        @media (max-width: 600px){
+            margin-top: 10px;
+        }
+        .updates-carousel-container {
+            position: relative;
+            .updates-carousel-item {
+                background: $white;
+                text-align: left;
+                margin: 25px 100px 60px 100px;
+                border-radius: 4px;
+                min-height: 250px;
+                position: relative;
+                display: none;
+                @media (max-width: 600px){
+                    margin-left: 45px;
+                    margin-right: 45px;
+                    margin-bottom: 45px;
+                }
+                img {
+                    width: 50%;
+                    vertical-align: bottom;
+                    border-radius: 4px 0 0 4px;
+                    max-height: 280px;
+                    @media (max-width: 600px){
+                        width: 100%;
+                    }
+                }
+                .updates-container {
+                    width: 45%;
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-left: 25px;
+                    @media (max-width: 600px){
+                        width: 85%;
+                    }
+                    h3 {
+                        font-size: 24px;
+                        font-weight: 400;
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 24px;
+                        a {
+                            display: inline-block;
+                            margin-top: 20px;
+                        }
+                    }
+                }
+                &.is-visible{
+                    display: block;
+                }
+            }
+            .prev, .next{
+                position: absolute;
+                color: $textColor;
+                text-decoration: none;
+                top: 50%;
+                font-size: 50px;
+                font-weight: 400;
+                transform: translateY(-50%);
+                transition: .3s;
+                cursor: pointer;
+                &:hover{
+                    font-size: 70px;
+                }
+            }
+            .prev{
+                left: 35px;
+                @media (max-width: 600px){
+                    left: 10px;
+                }
+            }
+            .next{
+                right: 30px;
+                @media (max-width: 600px){
+                    right: 12px;
+                }
+            }
+        }
+
+        .updates-container .update-carousel .updates-carousel-container:hover:before {
+            left: -7%;
+        }
+    }
+>>>>>>> 7d3b3f341513ca2ed15afc21484e192c7f15c285
 }
