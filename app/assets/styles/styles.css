@@ -9,4 +9,5 @@
 @import "modules/regularUpdates.scss";
 @import "modules/homeStudentSection.scss";
 @import "modules/ancientStoriesHome.scss";
-@import "modules/tourismHome.scss"
+@import "modules/tourismHome.scss";
+@import "modules/twoColumn.scss";

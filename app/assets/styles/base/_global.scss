@@ -40,11 +40,21 @@ img {
     padding: 5px 15px;
     margin-bottom: 10px;
   }
+
+  &.secondary-btn{
+    background: $white;
+    color: $black;
+    border: 2px solid #000;
+      &:hover{
+          background: $homeCTAbackground;
+          color: $black;
+      }
+  }
 }
 
 p{
   color: #333;
-  margin: 10px 0;
+  margin: 20px 0;
   font-size: 16px;
   line-height: 22px;
 }
