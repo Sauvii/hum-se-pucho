@@ -6,7 +6,6 @@ class RegularUpdates {
         this.slides = document.getElementsByClassName("updates-carousel-item");
         this.n = 0;
         this.events();
-        this.visibleSlide(n);
     }
 
     events(){
