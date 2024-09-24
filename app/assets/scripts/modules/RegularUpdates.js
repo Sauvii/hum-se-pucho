@@ -42,3 +42,5 @@ class RegularUpdates {
         }
     }
 }
+
+export default RegularUpdates
