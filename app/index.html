@@ -15,8 +15,7 @@
   <header class="site-header">
     <div class="wrapper">
       <div class="header-container">
-        <div class="logo-image"><a href="https://www.humsepucho.com"><img src="assets/images/hum-se-pucho-logo.png"
-              alt="Hum Se Pucho Logo"></a>
+        <div class="logo-image"><a href="https://www.humsepucho.in"><img src="assets/images/hum-se-pucho-logo.png" alt="Hum Se Pucho Logo"></a>
         </div>
         <div class="menu-navigation">
           <ul class="top-menus">
@@ -311,37 +310,37 @@
   <script>
     let slides = document.getElementsByClassName("updates-carousel-item");
 
-let n = 0;
-  
-visibleSlide(n);
-  
-function visibleSlide(x) {
-  slides[x].classList.add("is-visible");
-}
+    let n = 0;
 
-function nextSlide(x) {
-  if (n < slides.length - 1) {
-    visibleSlide(n + 1);
-    slides[n].classList.remove("is-visible");
-    n++;
-  } else {
-    slides[n].classList.remove("is-visible");
-    n = 0;
     visibleSlide(n);
-  }
-}
 
-function previousSlide() {
-  if (n > 0) {
-    visibleSlide(n - 1);
-    slides[n].classList.remove("is-visible");
-    n--;
-  } else {
-    slides[n].classList.remove("is-visible");
-    n = slides.length - 1;
-    visibleSlide(n);
-  }
-}
+    function visibleSlide(x) {
+      slides[x].classList.add("is-visible");
+    }
+
+    function nextSlide(x) {
+      if (n < slides.length - 1) {
+        visibleSlide(n + 1);
+        slides[n].classList.remove("is-visible");
+        n++;
+      } else {
+        slides[n].classList.remove("is-visible");
+        n = 0;
+        visibleSlide(n);
+      }
+    }
+
+    function previousSlide() {
+      if (n > 0) {
+        visibleSlide(n - 1);
+        slides[n].classList.remove("is-visible");
+        n--;
+      } else {
+        slides[n].classList.remove("is-visible");
+        n = slides.length - 1;
+        visibleSlide(n);
+      }
+    }
   </script>
 
   <script src="/app/assets/scripts/App.js"></script>
